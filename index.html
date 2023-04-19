@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       <!-- Reset CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <!-- Font Awesome CSS  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />  
+    <!-- Calendar Style CSS -->
+    <title>Приложения</title>
+</head>
+
+<body> 
+    <header>
+        <div class="top_block">
+            <p>Часы, Календарь, Погода.</p>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <p>Часы</p>
+                <div class="wrapper">
+                  <div class="display">
+                      <div id="time"></div>
+                  </div>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="col-sm">
+                <p>Календарь</p>
+                <div class="calendar-wrapper">
+                    <button id="btnPrev" type="button">Предыдущий</button>
+                    <button id="btnNext" type="button">Следующий</button>
+                <div id="divCal"></div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <p>Погода</p>
+                <div class="weather">
+                    <div class="text-center">
+                        <button onclick="getLocation()"  class="btn btn-outline-light">Определить местоположение</button>
+                    <br>
+                        <p id="demo"></p>
+                    </div>
+                    <div class="weather__inner">
+                      <div class="current">
+                        <div class="current__city"> -- </div>
+                        <div class="current__description"> -- </div>
+                        <div class="current__temperature"> --˚</div>
+                      </div>
+                
+                      <div class="forecast">
+                        <div class="forecast__item">
+                          <div class="forecast__time">Сейчас</div>
+                          <div class="forecast__icon icon__01d"></div>
+                          <div class="forecast__temperature"> --˚</div>
+                        </div>
+                
+                        <div class="forecast__item">
+                          <div class="forecast__time"> -- </div>
+                          <div class="forecast__icon icon__01d"></div>
+                          <div class="forecast__temperature"> --˚</div>
+                        </div>
+                
+                        <div class="forecast__item">
+                          <div class="forecast__time"> -- </div>
+                          <div class="forecast__icon icon__04d"></div>
+                          <div class="forecast__temperature"> --˚</div>
+                        </div>
+                
+                        <div class="forecast__item">
+                          <div class="forecast__time"> -- </div>
+                          <div class="forecast__icon icon__04d"></div>
+                          <div class="forecast__temperature"> --˚</div>
+                        </div>
+                
+                        <div class="forecast__item">
+                          <div class="forecast__time"> -- </div>
+                          <div class="forecast__icon icon__02d"></div>
+                          <div class="forecast__temperature"> --˚</div>
+                        </div>
+                
+                        <div class="forecast__item">
+                          <div class="forecast__time"> -- </div>
+                          <div class="forecast__icon icon__02d"></div>
+                          <div class="forecast__temperature"> --˚</div>
+                        </div>
+                      </div>
+                
+                      <div class="details">
+                        <div class="details__row">
+                          <div class="details__item feelslike">
+                            <div class="details__name">ощущается как</div>
+                            <div class="details__value"> --˚</div>
+                          </div>
+                          <div class="details__item pressure">
+                            <div class="details__name">давление</div>
+                            <div class="details__value"> -- мм. рт. ст.</div>
+                          </div>
+                        </div>
+                        <div class="details__row">
+                          <div class="details__item humidity">
+                            <div class="details__name">влажность</div>
+                            <div class="details__value"> -- %</div>
+                          </div>
+                          <div class="details__item wind">
+                            <div class="details__name">ветер</div>
+                            <div class="details__value"> -- м/с</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+
+
+    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
